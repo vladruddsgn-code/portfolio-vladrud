@@ -51,17 +51,17 @@ export default function HeroSection({ active }: HeroSectionProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/80" />
 
       {/* Text */}
-      <div className="absolute bottom-16 left-8 right-8">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-3 transition-all duration-500">
+      <div className="absolute bottom-12 md:bottom-16 left-6 md:left-8 right-6 md:right-8">
+        <p className="text-[10px] md:text-xs tracking-[0.3em] uppercase text-white/40 mb-2 md:mb-3 transition-all duration-500">
           {headlines[active].sub}
         </p>
-        <h1 className="text-6xl md:text-8xl font-light tracking-tight text-white leading-none transition-all duration-500">
+        <h1 className="text-4xl md:text-8xl font-light tracking-tight text-white leading-none transition-all duration-500">
           {headlines[active].title}
         </h1>
       </div>
 
-      {/* Scroll hint */}
-      <div className="absolute bottom-8 right-8 flex flex-col items-center gap-2">
+      {/* Scroll hint — тільки десктоп */}
+      <div className="hidden md:flex absolute bottom-8 right-8 flex-col items-center gap-2">
         <span className="text-[10px] tracking-[0.2em] uppercase text-white/30 rotate-90 origin-center">
           scroll
         </span>

@@ -276,10 +276,10 @@ export default function PortfolioGrid({ active }: PortfolioGridProps) {
       );
     }
     return (
-      <section className="relative bg-black px-8 py-24">
+      <section className="relative bg-black px-4 md:px-8 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase text-white/30 mb-12">Selected Work</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <p className="text-xs tracking-[0.2em] uppercase text-white/30 mb-8 md:mb-12">Selected Work</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {designItems.map((item) => (
               <DesignItemCard
                 key={item.id}
@@ -313,10 +313,10 @@ export default function PortfolioGrid({ active }: PortfolioGridProps) {
 
   return (
     <>
-      <section className="relative bg-black px-8 py-24">
+      <section className="relative bg-black px-4 md:px-8 py-16 md:py-24">
         <div className="max-w-6xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase text-white/30 mb-12">Selected Work</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <p className="text-xs tracking-[0.2em] uppercase text-white/30 mb-8 md:mb-12">Selected Work</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
             {items.map((item) => (
               <VideoItem
                 key={item.id}
@@ -332,9 +332,9 @@ export default function PortfolioGrid({ active }: PortfolioGridProps) {
 
       {/* On The Big Screen — тільки для Videography */}
       {active === "video-production" && (
-        <section className="relative bg-black px-8 pb-24">
+        <section className="relative bg-black px-4 md:px-8 pb-16 md:pb-24">
           <div className="max-w-6xl mx-auto">
-            <div className="border-t border-white/5 pt-16 mb-12">
+            <div className="border-t border-white/5 pt-12 md:pt-16 mb-8 md:mb-12">
               <p className="text-xs tracking-[0.2em] uppercase text-white/30">On The Big Screen</p>
               <p className="text-white/20 text-xs mt-2">Works featured on city LED screens</p>
             </div>
