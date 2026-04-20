@@ -24,7 +24,7 @@ export default function ContactSection() {
               <p className="text-xs tracking-[0.2em] uppercase text-white/50">Download CV</p>
               <div className="flex flex-col gap-3 mt-1">
                 <a
-                  href="/Resume Rudnitskyi Eng.pdf"
+                  href="/cv-eng.pdf"
                   download
                   className="group flex items-center gap-2.5 px-5 py-2.5 border border-white/40 text-white/80 text-xs tracking-[0.18em] uppercase hover:border-white hover:text-white transition-all duration-200 w-fit"
                 >
@@ -36,7 +36,7 @@ export default function ContactSection() {
                   ENG
                 </a>
                 <a
-                  href="/Резюме Рудніцький UA.pdf"
+                  href="/cv-ua.pdf"
                   download
                   className="group flex items-center gap-2.5 px-5 py-2.5 border border-white/40 text-white/80 text-xs tracking-[0.18em] uppercase hover:border-white hover:text-white transition-all duration-200 w-fit"
                 >
