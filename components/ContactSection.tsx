@@ -22,7 +22,6 @@ export default function ContactSection() {
             {/* 2 — Download CV */}
             <div className="flex flex-col gap-4">
               <p className="text-xs tracking-[0.2em] uppercase text-white/30">Download CV</p>
-              <p className="text-white text-base font-light tracking-wide">Vladislav Rudnitskiy</p>
               <div className="flex flex-col gap-3 mt-1">
                 <a
                   href="/Resume Rudnitskyi Eng.pdf"
