@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Specialization } from "./PortfolioPage";
 
 const tabs: { id: Specialization; label: string }[] = [
-  { id: "ai-artist", label: "AI Filmmaker" },
+  { id: "ai-artist", label: "AI Creator" },
   { id: "video-production", label: "Video Production" },
   { id: "design-direction", label: "Design Direction" },
   { id: "video-editor", label: "Video Editor" },

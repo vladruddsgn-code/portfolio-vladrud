@@ -11,7 +11,7 @@ const videos: Record<Specialization, string> = {
 };
 
 const headlines: Record<Specialization, { title: string; sub: string }> = {
-  "ai-artist": { title: "AI Filmmaker", sub: "Generating worlds that don't exist yet" },
+  "ai-artist": { title: "AI Creator", sub: "Generating worlds that don't exist yet" },
   "video-editor": { title: "Video Editor", sub: "Rhythm. Pacing. Meaning." },
   "design-direction": { title: "Design Direction", sub: "Shaping vision, guiding craft" },
   "video-production": { title: "Video Production", sub: "Real moments, sharp eye" },
