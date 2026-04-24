@@ -102,6 +102,17 @@ export default function ContactSection() {
                   </div>
                   <span className="text-sm tracking-wide">Instagram</span>
                 </a>
+
+                <a href="https://www.linkedin.com/in/vladislav-rudnitskyi/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 text-white/70 hover:text-white transition-colors duration-200">
+                  <div className="w-10 h-10 rounded-full border border-white/25 group-hover:border-white/60 flex items-center justify-center transition-colors duration-200 shrink-0">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                      <rect x="2" y="9" width="4" height="12"/>
+                      <circle cx="4" cy="4" r="2"/>
+                    </svg>
+                  </div>
+                  <span className="text-sm tracking-wide">LinkedIn</span>
+                </a>
               </div>
             </div>
 

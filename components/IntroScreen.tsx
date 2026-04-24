@@ -78,11 +78,31 @@ export default function IntroScreen({ onSelect }: IntroScreenProps) {
         ))}
       </div>
 
-      {/* Bottom */}
-      <div>
-        <p className="text-[10px] tracking-[0.2em] uppercase text-white/15">
+      {/* Bottom — контакти */}
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-white/20">
           Designer & Filmmaker
         </p>
+        <div className="flex flex-wrap items-center gap-6">
+          <a href="mailto:vladrud.dsgn@gmail.com" className="text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/70 transition-colors duration-200">
+            Email
+          </a>
+          <a href="tel:+380966055026" className="text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/70 transition-colors duration-200">
+            +38 096 605 50 26
+          </a>
+          <a href="https://t.me/vladrudnitskiy" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/70 transition-colors duration-200">
+            Telegram
+          </a>
+          <a href="https://wa.me/380966055026" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/70 transition-colors duration-200">
+            WhatsApp
+          </a>
+          <a href="https://www.linkedin.com/in/vladislav-rudnitskyi/" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/70 transition-colors duration-200">
+            LinkedIn
+          </a>
+          <a href="https://www.instagram.com/by.vladrud/" target="_blank" rel="noopener noreferrer" className="text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/70 transition-colors duration-200">
+            Instagram
+          </a>
+        </div>
       </div>
     </div>
   );
