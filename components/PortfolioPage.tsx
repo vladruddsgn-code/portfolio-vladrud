@@ -7,7 +7,7 @@ import PortfolioGrid from "./PortfolioGrid";
 import ContactSection from "./ContactSection";
 import IntroScreen from "./IntroScreen";
 
-export type Specialization = "ai-artist" | "video-editor" | "design-direction" | "video-production";
+export type Specialization = "ai-artist" | "video-editor" | "video-production";
 
 export default function PortfolioPage() {
   const [active, setActive] = useState<Specialization>("ai-artist");

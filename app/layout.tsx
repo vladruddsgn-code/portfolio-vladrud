@@ -8,8 +8,31 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Vladislav Rudnitskiy — Portfolio",
-  description: "AI Artist, Video Editor, Graphic Designer, Videographer",
+  metadataBase: new URL("https://portfolio-vladrud.vercel.app"),
+  title: "Vlad Rudnitskyi — AI Filmmaker & Video Editor",
+  description:
+    "Portfolio of Vlad Rudnitskyi: AI filmmaker, video production specialist, and video editor creating cinematic films, edits, and visual AI work.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Vlad Rudnitskyi — AI Filmmaker & Video Editor",
+    description:
+      "Selected AI filmmaking, video production, and video editing work by Vlad Rudnitskyi.",
+    url: "/",
+    siteName: "Vlad Rudnitskyi Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Vlad Rudnitskyi — AI Filmmaker & Video Editor",
+    description:
+      "Selected AI filmmaking, video production, and video editing work by Vlad Rudnitskyi.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/icon.png",
   },

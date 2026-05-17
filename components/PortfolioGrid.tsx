@@ -17,10 +17,7 @@ const bigScreenItems = [
   { id: 5, youtubeId: "WTJDKhalhGY" },
 ];
 
-// Design Direction items (image + optional Figma links)
-type DesignItem = { id: number; title: string; image: string; figmaUrl?: string; protoUrl?: string };
-
-const videoItems: Record<Exclude<Specialization, "design-direction">, VideoItem[]> = {
+const videoItems: Record<Specialization, VideoItem[]> = {
   "ai-artist": [
     { id: 1, title: "AI Film 01", youtubeId: "DHgKvHn3k_Y" },
     { id: 2, title: "AI Film 02", youtubeId: "Xp2o1ESWm58" },
@@ -66,45 +63,6 @@ const videoItems: Record<Exclude<Specialization, "design-direction">, VideoItem[
   ],
 };
 
-const designItems: DesignItem[] = [
-  {
-    id: 1,
-    title: "Site Graffitone",
-    image: "/portfolio/design-direction/graffitone.jpg",
-    figmaUrl: "https://www.figma.com/design/qloilFTlahewSEfyjbiymO/Site-Graffitone?node-id=0-1",
-    protoUrl: "https://www.figma.com/proto/qloilFTlahewSEfyjbiymO/Site-Graffitone?node-id=1-2&scaling=scale-down-width&content-scaling=fixed",
-  },
-  {
-    id: 3,
-    title: "Взаємо.ua",
-    image: "/portfolio/design-direction/Desktop 1920.jpg",
-    figmaUrl: "https://www.figma.com/design/d0UHGXYgOqWCqMl592DNNZ/%D0%92%D0%B7%D0%B0%D1%94%D0%BC%D0%BE.ua?node-id=1-985",
-    protoUrl: "https://www.figma.com/proto/d0UHGXYgOqWCqMl592DNNZ/%D0%92%D0%B7%D0%B0%D1%94%D0%BC%D0%BE.ua?page-id=0%3A1&node-id=1-533&viewport=-3022%2C-1621%2C0.75&t=Dj2VWEtMGahWRrwk-1&scaling=scale-down-width&content-scaling=fixed",
-  },
-  {
-    id: 2,
-    title: 'Site "Go" Тури',
-    image: "/portfolio/design-direction/Slide 16_9 - 1080.jpg",
-    figmaUrl: "https://www.figma.com/design/wHCVELNUZbEMRPyFzvKjv2/Site-%22Go%22-%D0%A2%D1%83%D1%80%D0%B8?node-id=0-1",
-    protoUrl: "https://www.figma.com/proto/wHCVELNUZbEMRPyFzvKjv2/Site-%22Go%22-%D0%A2%D1%83%D1%80%D0%B8?page-id=0%3A1&node-id=1-649&viewport=-1174%2C202%2C0.39&t=nY2R3yNecMof1dYv-1&scaling=scale-down-width&content-scaling=fixed",
-  },
-  {
-    id: 4,
-    title: "Site Зачаїлися",
-    image: "/portfolio/design-direction/Site зачаїлися.jpg",
-  },
-  {
-    id: 5,
-    title: "Smoki Portfolio",
-    image: "/portfolio/design-direction/Smoki Portfolio.jpg",
-  },
-  {
-    id: 6,
-    title: "Lovito",
-    image: "/portfolio/design-direction/Lovito.jpg",
-  },
-];
-
 // --- Video Item Component ---
 function VideoItem({
   title,
@@ -145,64 +103,6 @@ function VideoItem({
   );
 }
 
-// --- Design Direction Item Component ---
-function DesignItemCard({ title, image, figmaUrl, protoUrl, onImageClick }: DesignItem & { onImageClick: () => void }) {
-  const hasFigma = !!figmaUrl;
-
-  return (
-    <div className="group relative aspect-video bg-zinc-950 overflow-hidden cursor-pointer" onClick={!hasFigma ? onImageClick : undefined}>
-      {/* Image with scroll effect on hover */}
-      <div className="absolute inset-0 overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="w-full object-cover object-top transition-all duration-[3000ms] ease-in-out group-hover:object-bottom"
-          style={{ height: "100%", minHeight: "100%" }}
-        />
-      </div>
-
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/65 transition-colors duration-500" />
-
-      {/* Buttons on hover */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {hasFigma ? (
-          <>
-            <a
-              href={figmaUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="px-5 py-2 border border-white/60 text-white text-xs tracking-[0.15em] uppercase hover:border-white hover:bg-white/10 transition-colors duration-200 w-48 text-center"
-            >
-              Open in Figma
-            </a>
-            <a
-              href={protoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => e.stopPropagation()}
-              className="px-5 py-2 border border-white/60 text-white text-xs tracking-[0.15em] uppercase hover:border-white hover:bg-white/10 transition-colors duration-200 w-48 text-center"
-            >
-              View Design
-            </a>
-          </>
-        ) : (
-          <button
-            onClick={onImageClick}
-            className="px-5 py-2 border border-white/60 text-white text-xs tracking-[0.15em] uppercase hover:border-white hover:bg-white/10 transition-colors duration-200 w-48 text-center"
-          >
-            View Project
-          </button>
-        )}
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent pt-8 pb-4 px-4">
-        <span className="text-xs tracking-[0.15em] uppercase text-white font-light">{title}</span>
-      </div>
-    </div>
-  );
-}
-
 // --- Vertical (Shorts) Item ---
 function ShortsItem({ youtubeId, onClick }: { youtubeId: string; onClick: () => void }) {
   const thumb = `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`;
@@ -214,7 +114,7 @@ function ShortsItem({ youtubeId, onClick }: { youtubeId: string; onClick: () => 
     >
       <Image
         src={thumb}
-        alt=""
+        alt="On The Big Screen video thumbnail"
         fill
         className="object-cover transition-all duration-700 group-hover:scale-105 grayscale group-hover:grayscale-0"
         unoptimized
@@ -229,27 +129,6 @@ function ShortsItem({ youtubeId, onClick }: { youtubeId: string; onClick: () => 
   );
 }
 
-// --- Image Modal ---
-function ImageModal({ src, title, onClose }: { src: string; title: string; onClose: () => void }) {
-  return (
-    <div
-      className="fixed inset-0 z-[100] bg-black/95 flex items-start justify-center overflow-y-auto py-16"
-      onClick={onClose}
-    >
-      <button className="fixed top-6 right-6 text-white/40 hover:text-white transition-colors text-xs tracking-[0.2em] uppercase z-10">
-        Close ✕
-      </button>
-      <span className="fixed top-6 left-8 text-white/40 text-xs tracking-[0.2em] uppercase">{title}</span>
-      <img
-        src={src}
-        alt={title}
-        className="w-[85vw] max-w-5xl h-auto"
-        onClick={(e) => e.stopPropagation()}
-      />
-    </div>
-  );
-}
-
 // --- Main Grid ---
 interface PortfolioGridProps {
   active: Specialization;
@@ -257,48 +136,10 @@ interface PortfolioGridProps {
 
 export default function PortfolioGrid({ active }: PortfolioGridProps) {
   const [modal, setModal] = useState<{ youtubeId: string; title: string } | null>(null);
-  const [imageModal, setImageModal] = useState<{ src: string; title: string } | null>(null);
 
-  const isDesignDirection = active === "design-direction";
-  const items = isDesignDirection ? [] : videoItems[active as Exclude<Specialization, "design-direction">];
-  const allIds = useMemo(() => items.map((i) => i.youtubeId), [active]); // eslint-disable-line react-hooks/exhaustive-deps
+  const items = videoItems[active];
+  const allIds = useMemo(() => items.map((i) => i.youtubeId), [items]);
   const meta = useYoutubeMeta(allIds);
-
-  // Design Direction
-  if (isDesignDirection) {
-    if (designItems.length === 0) {
-      return (
-        <section className="relative bg-black px-8 py-24">
-          <div className="max-w-6xl mx-auto">
-            <p className="text-xs tracking-[0.2em] uppercase text-white/20">Coming soon</p>
-          </div>
-        </section>
-      );
-    }
-    return (
-      <section className="relative bg-black px-4 md:px-8 py-16 md:py-24">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-xs tracking-[0.2em] uppercase text-white/30 mb-8 md:mb-12">Selected Work</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-            {designItems.map((item) => (
-              <DesignItemCard
-                key={item.id}
-                {...item}
-                onImageClick={() => setImageModal({ src: item.image, title: item.title })}
-              />
-            ))}
-          </div>
-          {imageModal && (
-            <ImageModal
-              src={imageModal.src}
-              title={imageModal.title}
-              onClose={() => setImageModal(null)}
-            />
-          )}
-        </div>
-      </section>
-    );
-  }
 
   // Video sections
   if (items.length === 0) {

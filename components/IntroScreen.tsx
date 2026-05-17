@@ -4,9 +4,8 @@ import { useState } from "react";
 import { Specialization } from "./PortfolioPage";
 
 const options: { id: Specialization; label: string; sub: string }[] = [
-  { id: "ai-artist",        label: "AI Creator",      sub: "Generative worlds & visual AI" },
+  { id: "ai-artist",        label: "AI Filmmaker",    sub: "Generative worlds & visual AI" },
   { id: "video-production", label: "Video Production",  sub: "Real moments, sharp eye" },
-  { id: "design-direction", label: "Design Direction",  sub: "Shaping vision, guiding craft" },
   { id: "video-editor",     label: "Video Editor",      sub: "Rhythm. Pacing. Meaning." },
 ];
 
@@ -33,7 +32,7 @@ export default function IntroScreen({ onSelect }: IntroScreenProps) {
       {/* Top */}
       <div className="flex justify-between items-center">
         <span className="text-xs tracking-[0.2em] uppercase text-white/40 font-light">
-          Vladislav Rudnitskiy
+          Vlad Rudnitskyi
         </span>
         <span className="text-xs tracking-[0.2em] uppercase text-white/20">
           Portfolio

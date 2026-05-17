@@ -6,14 +6,12 @@ import { Specialization } from "./PortfolioPage";
 const videos: Record<Specialization, string> = {
   "ai-artist": "/videos/hero-ai.mp4",
   "video-editor": "/videos/hero-ed.mp4",
-  "design-direction": "/videos/Design Port.mp4",
   "video-production": "/videos/hero-vd.mp4",
 };
 
 const headlines: Record<Specialization, { title: string; sub: string }> = {
-  "ai-artist": { title: "AI Creator", sub: "Generating worlds that don't exist yet" },
+  "ai-artist": { title: "AI Filmmaker", sub: "Generating worlds that don't exist yet" },
   "video-editor": { title: "Video Editor", sub: "Rhythm. Pacing. Meaning." },
-  "design-direction": { title: "Design Direction", sub: "Shaping vision, guiding craft" },
   "video-production": { title: "Video Production", sub: "Real moments, sharp eye" },
 };
 
