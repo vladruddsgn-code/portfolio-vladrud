@@ -25,6 +25,7 @@ const videoItems: Record<Specialization, VideoItem[]> = {
     { id: 4, title: "AI Film 04", youtubeId: "RWPzi78PJ3M" },
     { id: 5, title: "AI Film 05", youtubeId: "TnS2xhRhKsc" },
     { id: 6, title: "AI Film 06", youtubeId: "X6UKG5q_kQM" },
+    { id: 7, title: "AI Film 07", youtubeId: "Z1MpbijV-Cg" },
   ],
   "video-editor": [
     { id: 1, title: "Edit 01", youtubeId: "0Qv_Zl8IiqM" },
